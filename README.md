@@ -5,7 +5,7 @@ Model selection examples and exercises for CEDAS 2023 summer school
 
 `chem-data.csv` is synthetic chemical data describing the rate of product formation as a function of reactant concentration (powers of reactant concentration are also given)
 
-`mt-data.csv` is bioinformatic data on mtDNA gene retention and associated possible predictors, taken from (2).
+`mt-data.csv` and `pt-data.csv` is bioinformatic data on mtDNA and ptDNA gene retention and associated possible predictors, taken from (2).
 
 # References
 
