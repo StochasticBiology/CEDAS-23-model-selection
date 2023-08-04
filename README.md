@@ -1,6 +1,8 @@
 # CEDAS-23-model-selection
 Model selection examples and exercises for CEDAS 2023 summer school
 
+![image](https://github.com/StochasticBiology/CEDAS-23-model-selection/assets/50171196/1dcb59bf-6ad0-4e83-b72a-302aebdfed5c)
+
 `mombf-vignette.R` is an adapted code vignette from the `mombf` library (1), demonstrating a simple example of Bayesian model selection.
 
 `chem-data.csv` is synthetic chemical data describing the rate of product formation as a function of reactant concentration (powers of reactant concentration are also given)
