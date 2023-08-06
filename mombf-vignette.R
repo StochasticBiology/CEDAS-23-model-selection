@@ -34,3 +34,9 @@ fit1$margpp
 # this won't work with the normal prior; other packages like rstanarm and BAS could be used 
 # but we can use the momprior here (l.18, for example)
 coef(fit1) 
+
+####
+
+# (frequentist) multiple regression
+my.lm = lm(y ~ x)
+summary(my.lm)
