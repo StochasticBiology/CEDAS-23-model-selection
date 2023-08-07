@@ -7,7 +7,7 @@ Model selection examples and exercises for CEDAS 2023 summer school
 
 `mt-data.csv` and `pt-data.csv` is bioinformatic data on mtDNA and ptDNA gene retention and associated possible predictors, taken from (2).
 
-`slides/` contains the TeX for the lecture slides (`cedas-23.tex`) and most images therein; those under different licenses are omitted.
+`slides/` contains the TeX for the lecture slides (`cedas-23.tex`) and most images therein; those under different licenses are omitted. `cedas.R` generates example plots for these slides.
 
 # References
 
