@@ -13,6 +13,11 @@
 
 \renewcommand{\cellsys}{\mycite{Cell Systems \textbf{2} 101 (2016)}}
 \newcommand{\cellsystwo}{\mycite{Cell Systems \textbf{13} e5 (2022)}}
+\newcommand{\casali}{\mycite{Casali et al., Nat Genet \textbf{46} 279 (2014)}}
+\newcommand{\marcus}{\mycite{Bioinformatics \textbf{39} btac803 (2023)}}
+\newcommand{\hypertraps}{\mycite{Cell Systems \textbf{10} 39 (2020)}}
+\newcommand{\jallow}{\mycite{Jallow et al. PLoS ONE \textbf{7} e45645 (2012)}}
+\newcommand{\malaria}{\mycite{npj Digital Medicine \textbf{2} 63 (2019)}}
 
 \begin{document}
 
@@ -252,36 +257,6 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Bayesian model selection}  
- \includegraphics[width=\textwidth]{cedas-bayes-mod-1.png}
-\end{frame}
-\begin{frame}{Bayesian model selection}
-  \begin{itemize}
-    \item  $\textcolor{red}{y \sim x}$ and $\textcolor{blue}{y \sim x^3}$, best fits ($\hat{\theta}$)
-    \item $\textcolor{red}{\log \hat{\mathcal{L}}} = -1.59, \textcolor{red}{AIC} = 9.17$
-      \item $\textcolor{blue}{\log \hat{\mathcal{L}}} = -1.16, \textcolor{blue}{AIC} = 8.32$
-      \end{itemize}
- \includegraphics[width=\textwidth]{cedas-bayes-mod-2.png}
-\end{frame}
-
-\begin{frame}{Bayesian model selection}
-  \begin{itemize}
-    \item  $\textcolor{red}{y \sim x}$ and $\textcolor{blue}{y \sim x^3}$, best fits ($\hat{\theta}$)
-    \item $\textcolor{red}{\log \hat{\mathcal{L}}} = -1.59, \textcolor{red}{AIC} = 9.17$
-      \item $\textcolor{blue}{\log \hat{\mathcal{L}}} = -1.16, \textcolor{blue}{AIC} = 8.32$
-      \end{itemize}
- \includegraphics[width=.45\textwidth]{cedas-bayes-mod-2.png} \includegraphics[width=.45\textwidth]{cedas-bayes-peaks.png}
-\end{frame}
-
-\begin{frame}{Bayesian model selection}
-  \begin{itemize}
-    \item  $\textcolor{red}{y \sim x}$ and $\textcolor{blue}{y \sim x^3}$
-    \item Best fits ($\hat{\theta}$) and perturbations ($\hat{\theta} + \epsilon$)
-      \end{itemize}  
- \includegraphics[width=\textwidth]{cedas-bayes-mod-3.png}
-\end{frame}
-
-
 %    \item $P_{posterior}(\theta|y) = \frac{P(y|\theta)}{P(y)} \times P_{prior}(\theta)$
 \begin{frame}{Inference using Bayes' rule}
   \begin{itemize}
@@ -305,24 +280,72 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Inference using Bayes' rule}
+  \begin{itemize}
+   \item $P_{posterior}(\theta|y) = \frac{P(y|\theta)}{P(y)} \times \textcolor{red}{P_{prior}(\theta)} $
+      \end{itemize}
+\includegraphics[width=\textwidth]{bayes-inf-1.png}
+\end{frame}
+\begin{frame}{Inference using Bayes' rule}
+  \begin{itemize}
+   \item $P_{posterior}(\theta|y) = \frac{P(y|\theta)}{P(y)} \times \textcolor{red}{P_{prior}(\theta)} $
+      \end{itemize}
+\includegraphics[width=\textwidth]{bayes-inf-2.png}
+\end{frame}
+\begin{frame}{Inference using Bayes' rule}
+  \begin{itemize}
+  \item $P_{posterior}(\theta|y) = \textcolor{teal}{\frac{P(y|\theta)}{P(y)}} \times \textcolor{red}{P_{prior}(\theta)} $
+      \end{itemize}
+\includegraphics[width=\textwidth]{bayes-inf-3.png}
+\end{frame}
+\begin{frame}{Inference using Bayes' rule}
+  \begin{itemize}
+  \item $\textcolor{blue}{P_{posterior}(\theta|y)} = \textcolor{teal}{\frac{P(y|\theta)}{P(y)}} \times \textcolor{red}{P_{prior}(\theta)} $
+      \end{itemize}
+\includegraphics[width=\textwidth]{bayes-inf-4.png}
+\end{frame}
+
 \begin{frame}{Bayesian model selection}
   \begin{itemize}
-    \item Marginal likelihood $P(y|M) = \int_{\theta} P(y|\theta, M) P_{prior}(\theta|M) d\theta$
-      \item[] \includegraphics[width=.8\textwidth]{cedas-bayes-peaks.png}
-      \item $\textcolor{blue}{y \sim x^3}$: high local likelihood, but rapid dropoff as $\theta$ changes
-      \item $\textcolor{red}{y \sim x}$: lower maximum likelihood, but more robust to different $\theta$
-      \item $\int$: $\textcolor{red}{y \sim x}$ will win \emph{unless} we have strong prior belief around $\textcolor{blue}{\hat{\theta}}$
-      \item (Even flat) priors dictate the result of Bayesian model selection!
+  \item Marginal likelihood $P(y|M) = \int_{\theta} \textcolor{red}{P(y|\theta, M)} \textcolor{gray}{P_{prior}(\theta|M)} d\theta$
   \end{itemize}
+  \includegraphics[width=.7\textwidth]{bms-1.png}
+\end{frame}
+\begin{frame}{Bayesian model selection}
+  \begin{itemize}
+  \item Marginal likelihood $P(y|M) = \int_{\theta} \textcolor{red}{P(y|\theta, M)} \textcolor{gray}{P_{prior}(\theta|M)} d\theta$
+  \end{itemize}
+  \includegraphics[width=.7\textwidth]{bms-2.png}
+\end{frame}
+\begin{frame}{Bayesian model selection}
+  \begin{itemize}
+  \item Marginal likelihood $P(y|M) = \int_{\theta} \textcolor{red}{P(y|\theta, M)} \textcolor{gray}{P_{prior}(\theta|M)} d\theta$
+  \end{itemize}
+  \includegraphics[width=.7\textwidth]{bms-3.png}
+\end{frame}
+\begin{frame}{Bayesian model selection}
+  \begin{itemize}
+  \item Marginal likelihood $P(y|M) = \int_{\theta} \textcolor{red}{P(y|\theta, M)} \textcolor{gray}{P_{prior}(\theta|M)} d\theta$
+  \end{itemize}
+  \includegraphics[width=.7\textwidth]{bms-4.png}
 \end{frame}
 
 \begin{frame}{Bayesian model selection}
   \begin{itemize}
     \item Marginal likelihood $P(y|M) = \int_{\theta} P(y|\theta, M) P_{prior}(\theta|M) d\theta$
-      \item[] \includegraphics[width=.8\textwidth]{cedas-bayes-peaks.png}
-      \item More constrained models are less favoured under integration
-      \item Acts as a natural control for complexity: more complex models are more constrained
+  \end{itemize}
+  \includegraphics[width=\textwidth]{cedas-model-sel-x2.png}
+  \includegraphics[width=.5\textwidth]{minka.png}
+  \figcred{Tom Minka (MIT)}
+\end{frame}
+
+\begin{frame}{Bayesian model selection}
+  \begin{itemize}
+    \item Marginal likelihood $P(y|M) = \int_{\theta} P(y|\theta, M) P_{prior}(\theta|M) d\theta$
+       \item More flexible models $\rightarrow$ more `spread-out' prior density $\rightarrow$ need higher likelihoods to compete
+      \item Acts as a natural control for complexity: more complex models are more constrained (Occam's razor)
       \item Bayesian model selection has some (and can have more) \textbf{regularisation}: favouring simplicity
+        \item Priors unavoidably matter -- they are central to the story
         \item See also data science content: LASSO, ridge, etc
   \end{itemize}
 \end{frame}
@@ -330,7 +353,6 @@
 
 \begin{frame}{Bayesian model selection}
   \begin{itemize}
-    \item For a single model: $P_{posterior}(\theta|y) = \frac{P(y|\theta)}{P(y)} \times P_{prior}(\theta)$
     \item Marginal likelihood $P(y|M) = \int_{\theta} P(y|\theta, M) P_{prior}(\theta|M) d\theta$
     \item Gives a readout of support for a model over all values of parameters (not just $\hat{\theta}$)
     \item Bayes factor compares models:
@@ -429,6 +451,148 @@
   \item Thanks, and let's chat! \includegraphics[width=0.025\textwidth]{twitter.png} \footnotesize @mitomaths
     \end{itemize}
 \end{frame}
+
+
+\begin{frame}{Tuberculosis}
+  \begin{itemize}
+  \item Tuberculosis causes millions of deaths worldwide
+    \item TB is evolving resistance to drugs (4-20\% cases globally displaying multidrug resistance)
+    \item Anti-microbial resistance (AMR) is UN's \#1 global societal challenge, anticipated to cause 10m deaths and cost \$100trn by 2050
+      \end{itemize}
+  \centering
+    \includegraphics[width=.6\textwidth]{tb-bacterium.jpg} \\
+\figcred{Figure source: 123RF}
+\end{frame}
+
+\begin{frame}{Tuberculosis evolution}
+ \begin{itemize}
+ \item Casali \emph{et al.}: 1000 TB isolates from Russia sequenced
+ \item Mutations conferring resistance to different drugs characterised
+   \end{itemize}
+  \centering
+    \includegraphics[width=.7\textwidth]{casali-tb.png} \\
+\casali
+\end{frame}
+ 
+\begin{frame}{HyperTraPS infers pathways of AMR evolution in TB}
+  \centering
+    \includegraphics[width=.9\textwidth]{tb-3.png} \\
+\hypertraps, \marcus
+\end{frame}
+
+\begin{frame}{HyperTraPS infers pathways of AMR evolution in TB}
+   \begin{itemize}
+   \item Consistent early dynamics, more heterogeneous later
+   \item Which drug has highest probability of future resistance acquisition, given current state?
+     \item What demographic / geographical features influence evolutionary pathways?
+     \end{itemize}
+  \centering
+    \includegraphics[width=.45\textwidth]{tb-3.png}     \includegraphics[width=.5\textwidth]{tb-4.png} \\
+\hypertraps, \marcus
+\end{frame}
+
+\section{Malaria progression}
+
+\begin{frame}{Malaria progression}
+  \begin{itemize}
+  \item Severe malaria kills $>400k$ a year, mainly African children
+  \item WHO treatment guidelines are coarse-grained `one size fits all'
+    \item These guidelines don't capture patient and disease heterogeneity
+  \end{itemize}
+  \vspace{1cm}
+  \centering
+  \includegraphics[width=\textwidth]{npj-banner.png} \\
+  \jallow, \malaria
+\end{frame}
+
+\begin{frame}{HyperTraPS can be applied to learn pathways of symptom acquisition in malaria}
+        \begin{itemize}
+        \item Diverse clinical features can be coded as presence or absence
+\item 2904 Gambian children admitted to hospital: incomplete records
+        \end{itemize}
+        \centering
+          \includegraphics[width=.6\textwidth]{malaria-data1.png} \\
+ \jallow, \malaria
+\end{frame}
+
+\begin{frame}{HyperTraPS can be applied to learn pathways of symptom acquisition in malaria}
+  \begin{itemize}
+  \item HyperTraPS learns probabilities of symptom orderings in patients that survived/died
+    \item Ordering without longitudinal data
+  \end{itemize}
+  \centering
+\includegraphics[width=.75\textwidth]{malaria-map.png} \\
+\malaria
+\end{frame}
+
+
+
+\begin{frame}{HyperTraPS reveals pathways and patient risks in malaria}
+  \begin{columns}
+    \begin{column}{0.3\textwidth}
+  \begin{itemize}
+  \item Risk markers: symptoms that appear at different stages in surviving/dead patients
+    \item Only `first order' -- we can do better
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.7\textwidth}
+  \includegraphics[width=\textwidth]{malaria-distns.png}\\
+  \malaria
+    \end{column}
+  \end{columns}
+  
+\end{frame}
+
+
+\begin{frame}{HyperTraPS predicts hidden symptoms, future behaviour, and prognoses}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+  \begin{itemize}
+  \item Training-test split: learn pathways from training data, ask how likely a test observation is to be on a `death' pathway
+    \item Accounts for all observed features and any learned interactions
+  \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth]{malaria-risk1.png}
+    \end{column}
+  \end{columns}
+\malaria
+\end{frame}
+
+\begin{frame}{HyperTraPS predicts hidden symptoms, future behaviour, and prognoses}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+  \begin{itemize}
+  \item Training-test split: learn pathways from training data, ask how likely a test observation is to be on a `death' pathway
+    \item Accounts for all observed features and any learned interactions
+    \item 81\% classifications successful, false negative rate 6\%
+  \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth]{malaria-risk2.png}
+    \end{column}
+  \end{columns}
+\malaria
+\end{frame}
+
+
+
+\begin{frame}{HyperTraPS predicts hidden symptoms, future behaviour, and prognoses}
+  \begin{columns}
+    \begin{column}{0.3\textwidth} 
+  \begin{itemize}
+  \item Split data into 50\% training, 50\% test
+  \item Hide 10\% of features in test set
+  \item Symptoms recovered with 83\% success
+  \end{itemize}
+    \end{column}
+    \begin{column}{0.7\textwidth}
+\includegraphics[width=\textwidth]{malaria-predict1.png} \\
+\malaria
+    \end{column}
+  \end{columns}
+\end{frame}
+
 
 
 \end{document}
