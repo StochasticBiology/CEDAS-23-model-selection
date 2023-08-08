@@ -1,13 +1,15 @@
 # CEDAS-23-model-selection
 Model selection examples and exercises for CEDAS 2023 summer school
 
+`cedas-exercises.pdf` is our set of tasks for the DIY practical.
+
 `mombf-vignette.R` is an adapted code vignette from the `mombf` library (1), demonstrating a simple example of Bayesian model selection.
 
 `chem-data.csv` is synthetic chemical data describing the rate of product formation as a function of reactant concentration (powers of reactant concentration are also given)
 
 `mt-data.csv` and `pt-data.csv` is bioinformatic data on mtDNA and ptDNA gene retention and associated possible predictors, taken from (2).
 
-`slides/` contains the TeX for the lecture slides (`cedas-23.tex`) and most images therein; those under different licenses are omitted. `cedas.R` generates example plots for these slides.
+`cedas-23.pdf` is the lecture slides; `cedas.R` generates example plots for these slides.
 
 # References
 
