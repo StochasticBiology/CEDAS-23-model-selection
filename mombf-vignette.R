@@ -40,3 +40,15 @@ coef(fit1)
 # (frequentist) multiple regression
 my.lm = lm(y ~ x)
 summary(my.lm)
+
+my.lm.1 = lm(y ~ x[,1])
+my.lm.2 = lm(y ~ x[,2])
+my.lm.3 = lm(y ~ x[,3])
+my.lm.12 = lm(y ~ x[,1] + x[,2])
+my.lm.23 = lm(y ~ x[,2] + x[,3])
+my.lm.13 = lm(y ~ x[,1] + x[,3])
+my.lm.123 = lm(y ~ x[,1] + x[,2] + x[,3])
+
+AIC(my.lm.1, my.lm.2, my.lm.3, my.lm.12, my.lm.23, my.lm.13, my.lm.123)
+
+
