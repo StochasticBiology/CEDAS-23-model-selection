@@ -11,6 +11,14 @@ Model selection examples and exercises for CEDAS 2023 summer school
 
 `cedas-23.pdf` is the lecture slides; `cedas.R` generates example plots for these slides.
 
+Possible solutions
+----
+`chem-rates.R` captures some of the concepts in the chemical data example.
+
+`odna-analysis.R` captures some of the concepts in the organelle DNA example.
+
+Demonstration examples of model selection -- from the slides -- can be found in `cedas.R`.
+
 # References
 
 (1)  Rossell D, Cook JD, Telesca D, Roebuck P, Abril O, Torrens M (2022). _mombf: Bayesian
